@@ -87,6 +87,14 @@ jobs:
             wp option set show_on_front page --allow-root
             wp option set page_on_front $HOME_PAGE_ID --allow-root
             wp post meta update $HOME_PAGE_ID _is_githuber_markdown 1 --allow-root
+      - run:
+          name: Set wp2static settings
+          command: |
+            wp wp2static options set debug_mode 1 --allow-root
+            wp wp2static options set detection_level homepage --allow-root
+            wp wp2static options set selected_deployment_option zip --allow-root
+            wp wp2static options set baseUrl https://rfair404.github.io/wp-static-deploy --allow-root
+            wp wp2static options set baseUrl-zip https://rfair404.github.io/wp-static-deploy --allow-root
 
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
