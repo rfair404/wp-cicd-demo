@@ -102,8 +102,10 @@ jobs:
             cd ~/repo/wordpress
             php -S 0.0.0.0:8080 router.php &
             sleep 2; # This randomly fixed issue with not being able to connect
-            curl -i http://localhost:8080
-            wp wp2static generate --allow-root
+            wp plugin list
+            ls wp-content/uploads
+#            curl -i http://localhost:8080
+#            wp wp2static generate --allow-root
 #            wp wp2static deploy --allow-root
 #            FILES=$(cat wp-content/uploads/WP2STATIC-CURRENT-ARCHIVE.txt)
 #            echo $FILES
