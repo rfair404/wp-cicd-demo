@@ -97,10 +97,13 @@ jobs:
             wp wp2static options set baseUrl https://rfair404.github.io/wp-static-deploy --allow-root
             wp wp2static options set baseUrl-zip https://rfair404.github.io/wp-static-deploy --allow-root
       - run:
-          name: Crawl site with wp2static
+          name: Build wp2static
           command: |
             cd ~/repo/wordpress
             wp wp2static options set debug_mode 1 --allow-root
+            wp wp2static deploy --allow-root
+            FILES=$(cat wp-content/uploads/WP2STATIC-CURRENT-ARCHIVE.txt)
+            echo $FILES
 
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
