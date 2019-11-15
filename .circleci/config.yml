@@ -90,6 +90,7 @@ jobs:
       - run:
           name: Set wp2static settings
           command: |
+            cd ~/repo/wordpress
             wp wp2static options set debug_mode 1 --allow-root
             wp wp2static options set detection_level homepage --allow-root
             wp wp2static options set selected_deployment_option zip --allow-root
