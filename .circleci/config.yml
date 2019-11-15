@@ -95,6 +95,10 @@ jobs:
             wp wp2static options set selected_deployment_option zip --allow-root
             wp wp2static options set baseUrl https://rfair404.github.io/wp-static-deploy --allow-root
             wp wp2static options set baseUrl-zip https://rfair404.github.io/wp-static-deploy --allow-root
+      - run:
+          name: Crawl site with wp2static
+          command: |
+            wp wp2static options set debug_mode 1 --allow-root
 
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
