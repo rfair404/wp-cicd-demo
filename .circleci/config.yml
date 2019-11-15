@@ -36,7 +36,7 @@ jobs:
             - v1-dependencies-
 
       - run:
-          name: Install WPCIL
+          name: Install WPCLI
           command: |
             # set +eo pipefail
             # set -x
@@ -50,12 +50,6 @@ jobs:
               --admin_password=$WP_TEST_USER_PASS \
               --admin_email="$WP_TEST_USER@wordpress.dev" \
               --path=htdocs/wordpress
-            # Get the database
-            sshpass -e ssh -q -o StrictHostKeyChecking=no USER@TARGET.domain -p 10349 'wp db export - --single-transaction' > database.sql
-            mysql -h 127.0.0.1 -u root -D circle_test < database.sql
-            rm database.sql
-            # Activate all plugins
-            php wp-cli.phar plugin activate --all --path=htdocs/wordpress
             # Get alternative router so we can do without Apache or nginx
             cd ~/repo
             curl -s https://raw.githubusercontent.com/Seravo/wordpress-test-template/master/lib/router.php > htdocs/router.php
