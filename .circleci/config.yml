@@ -42,18 +42,9 @@ jobs:
             # set -x
             # Get WP-cli
             curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-            # Install WordPress
-            php wp-cli.phar core install \
-              --url=$WP_TEST_URL \
-              --title='Test' \
-              --admin_user=$WP_TEST_USER \
-              --admin_password=$WP_TEST_USER_PASS \
-              --admin_email="$WP_TEST_USER@wordpress.dev" \
-              --path=htdocs/wordpress
-            # Get alternative router so we can do without Apache or nginx
+            # Get alternative router
             cd ~/repo
-            curl -s https://raw.githubusercontent.com/Seravo/wordpress-test-template/master/lib/router.php > htdocs/router.php
-            cd htdocs
+            curl -s https://raw.githubusercontent.com/Seravo/wordpress-test-template/master/lib/router.php > router.php
             ls
             php -S 0.0.0.0:8080 router.php &
             sleep 2; # This randomly fixed issue with not being able to connect
