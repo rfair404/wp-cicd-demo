@@ -76,7 +76,17 @@ jobs:
             wp config create --dbname=$DB_NAME --dbuser=$DB_USER --dbpass=$DB_PASS --dbhost=$DB_HOST --allow-root
             wp core install --url=$WP_TEST_URL --title="CI Build Site" --admin_user=$WP_TEST_USER --admin_email=admin@example.com --admin_password=$WP_TEST_USER_PASS --skip-email --allow-root
             wp rewrite structure '/%postname%/' --allow-root
+            wp plugin activate static-html-output-plugin --allow-root
 
+      - run:
+          name: Customize WP Posts
+          command: |
+            cd ~/repo/wordpress
+            wp post delete $(wp post list --field=ID --format=csv --post_type=post,page --allow-root) --allow-root
+            HOME_PAGE_ID=$(wp post create --post_author=1 --post_date=2019-11-13 --post_title="WordPress Static Deployment"  --post_status=publish --post_type=page --comment_status=closed --post_modified=2019-11-13 --porcelain --allow-root ../config/homepage.md)
+            wp option set show_on_front page --allow-root
+            wp option set page_on_front $HOME_PAGE_ID --allow-root
+            wp post meta update $HOME_PAGE_ID _is_githuber_markdown 1 --allow-root
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
           paths:
