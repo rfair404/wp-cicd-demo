@@ -1,0 +1,6 @@
+.config.json
+docker-compose.yml
+wp-cli.yml
+wordpress
+config
+.idea
