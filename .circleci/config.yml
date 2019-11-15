@@ -47,7 +47,7 @@ jobs:
             echo Failed waiting for MySQL && exit 1
       - run:
           name: Composer install
-          command: composer install --quiet
+          command: composer install
 
       - run:
           name: Install WPCLI
