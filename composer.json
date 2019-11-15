@@ -1,0 +1,29 @@
+{
+    "name": "rfair404/wp-cicd-demo",
+    "description": "A WordPress CI/CD simple setup",
+    "type": "project",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Russell Fair",
+            "email": "rfair404@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress-core-installer": "1.0.2",
+        "johnpbloch/wordpress": "5.3"
+    },
+    "extra": {
+        "wordpress-install-dir": "wordpress",
+        "installer-paths": {
+            "wordpress/wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
+        }
+    }
+}
