@@ -4,3 +4,4 @@ wp-cli.yml
 wordpress
 config
 .idea
+/vendor/
