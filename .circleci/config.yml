@@ -7,7 +7,7 @@ jobs:
       # - image: circleci/php:7.0-fpm-node-browsers
       - image: k1sul1/circleci-wordpress:0.0.1
         environment:
-          - WP_TEST_URL: "http://localhost:12000"
+          - WP_TEST_URL: "http://localhost:8080"
           - WP_TEST_USER: "test"
           - WP_TEST_USER_PASS: "test"
           - WP_ENV: "ci"
