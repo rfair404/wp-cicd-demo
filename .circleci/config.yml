@@ -105,7 +105,7 @@ jobs:
             wp plugin list
             ls wp-content/uploads
 #            curl -i http://localhost:8080
-#            wp wp2static generate --allow-root
+            wp wp2static generate --allow-root
 #            wp wp2static deploy --allow-root
 #            FILES=$(cat wp-content/uploads/WP2STATIC-CURRENT-ARCHIVE.txt)
 #            echo $FILES
