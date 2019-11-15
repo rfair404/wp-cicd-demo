@@ -71,6 +71,8 @@ jobs:
       - run:
           name: Install WP Core
           command: |
+            cd ~/repo/wordpress
+            ls
             wp config create --dbname=$DB_NAME --dbuser=$DB_USER --dbpass=$DB_PASS --dbhost=$DB_HOST --allow-root
             wp core install --url=$WP_TEST_URL --title="CI Build Site" --admin_user=$WP_TEST_USER --admin_email=admin@example.com --admin_password=$WP_TEST_USER_PASS --skip-email --allow-root
             wp rewrite structure '/%postname%/' --allow-root
