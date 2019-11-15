@@ -7,7 +7,7 @@ jobs:
       # - image: circleci/php:7.0-fpm-node-browsers
       - image: k1sul1/circleci-wordpress:0.0.1
         environment:
-          - WP_TEST_URL: "http://localhost:8080"
+          - WP_TEST_URL: "http://localhost:1200"
           - WP_TEST_USER: "test"
           - WP_TEST_USER_PASS: "test"
           - WP_ENV: "ci"
@@ -52,9 +52,10 @@ jobs:
       - run:
           name: Install WPCLI
           command: |
-            # set +eo pipefail
-            # set -x
+             set +eo pipefail
+             set -x
             # Get WP-cli
+            echo "memory_limit = 512M" | sudo -E tee --append /usr/local/etc/php/conf.d/docker-php-memory.ini
             curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
             chmod +x wp-cli.phar
             sudo mv wp-cli.phar /usr/local/bin/wp
