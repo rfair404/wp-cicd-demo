@@ -56,8 +56,13 @@ jobs:
             # set -x
             # Get WP-cli
             curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+            chmod +x wp-cli.phar
+            sudo mv wp-cli.phar /usr/local/bin/wp
+      - run:
+          name: Install PHP Alt Router
+          command: |
             # Get alternative router
-            cd ~/repo
+            cd ~/repo/wordpress
             curl -s https://raw.githubusercontent.com/Seravo/wordpress-test-template/master/lib/router.php > router.php
             ls
             php -S 0.0.0.0:8080 router.php &
