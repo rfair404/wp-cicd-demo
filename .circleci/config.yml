@@ -100,7 +100,7 @@ jobs:
           name: Build wp2static
           command: |
             cd ~/repo/wordpress
-            wp wp2static options set debug_mode 1 --allow-root
+            wp wp2static generate --allow-root
             wp wp2static deploy --allow-root
             FILES=$(cat wp-content/uploads/WP2STATIC-CURRENT-ARCHIVE.txt)
             echo $FILES
