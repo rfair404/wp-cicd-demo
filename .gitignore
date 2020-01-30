@@ -5,3 +5,4 @@ wordpress
 config
 .idea
 /vendor/
+auth.json
