@@ -1,0 +1,8 @@
+{
+    "http-basic": {
+        "wpremiumpackagist.org": {
+            "username": "KEY_HERE",
+            "password": "PASS_HERE"
+        }
+    }
+}

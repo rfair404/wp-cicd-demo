@@ -31,7 +31,10 @@ jobs:
             - v1-dependencies-
       - run:
           name: Create Composer Auth
-          command: which jq 
+          command: | 
+            cp auth-sample.json auth.json
+            sed -i 's/KEY_HERE/$COMPOSER_AUTH_KEY/g'
+            sed -i 's/PASS_HERE/$COMPOSER_AUTH_PASSWORD/g'
       - run:
           name: Composer install
           command: composer install --quiet
