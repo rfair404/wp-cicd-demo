@@ -21,7 +21,7 @@
         "johnpbloch/wordpress-core-installer": "1.0.2",
         "johnpbloch/wordpress": "5.3.2",
         "wpackagist-plugin/wordpress-importer": "0.6.4",
-        "wpackagist-plugin/wordpress-importer": "0.6.4"
+        "wpackagist-plugin/autoptimize": "2.6.1"
     },
     "extra": {
         "wordpress-install-dir": "wordpress",
