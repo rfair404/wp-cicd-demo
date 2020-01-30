@@ -68,6 +68,7 @@ jobs:
       - run:
           name: Check Files
           command: ls -lah wordpress
+      - add_ssh_keys
       - run:
           name: Test ssh connection
           command: ssh -T $SERVER_USER@$SERVER_HOST
