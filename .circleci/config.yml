@@ -45,8 +45,8 @@ jobs:
             sudo mv wp-cli.phar /usr/local/bin/wp
 
       - run:
-        name: Verify WP Core Files
-        command: ls -lah
+          name: Verify WP Core Files
+          command: ls -lah
 
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
