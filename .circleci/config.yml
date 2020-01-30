@@ -44,11 +44,14 @@ jobs:
             chmod +x wp-cli.phar
             sudo mv wp-cli.phar /usr/local/bin/wp
 
+      - run:
+        name: Verify WP Core Files
+        command: ls -lah
 
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
           paths:
-            - ./vendor
+            - ./wordpress
 
   deploy:
     working_directory: ~/repo
