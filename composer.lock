@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "eefc33d240cdebc4af5d2b1973de3e72",
+    "content-hash": "4616a213af25b1210038e87bf73e81aa",
     "packages": [
         {
             "name": "composer/installers",
@@ -277,6 +277,66 @@
             "homepage": "https://wordpress.org/plugins/autoptimize/"
         },
         {
+            "name": "wpackagist-plugin/batcache",
+            "version": "1.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/batcache/",
+                "reference": "tags/1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/batcache.1.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/batcache/"
+        },
+        {
+            "name": "wpackagist-plugin/cloudflare",
+            "version": "3.4.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/cloudflare/",
+                "reference": "tags/3.4.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/cloudflare.3.4.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/cloudflare/"
+        },
+        {
+            "name": "wpackagist-plugin/w3-total-cache",
+            "version": "0.13.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/w3-total-cache/",
+                "reference": "tags/0.13.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.13.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/w3-total-cache/"
+        },
+        {
             "name": "wpackagist-plugin/wordpress-importer",
             "version": "0.6.4",
             "source": {
@@ -297,6 +357,86 @@
             "homepage": "https://wordpress.org/plugins/wordpress-importer/"
         },
         {
+            "name": "wpackagist-plugin/wp-smushit",
+            "version": "3.4.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-smushit/",
+                "reference": "tags/3.4.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-smushit.3.4.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-smushit/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-super-cache",
+            "version": "1.7.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-super-cache/",
+                "reference": "tags/1.7.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-super-cache.1.7.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-super-cache/"
+        },
+        {
+            "name": "wpremiumpackagist-plugin/essence-pro",
+            "version": "1.3.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://wpremiumpackagist.org/satispress/essence-pro/1.3.1",
+                "reference": null,
+                "shasum": "eb9bb507b3151e35c98bf6d05e7b50956e2f6361"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-theme",
+            "authors": {
+                "name": "StudioPress",
+                "homepage": "https://www.studiopress.com/"
+            },
+            "description": "Beautiful, clutter-free simplicity from the outside in, allowing you and your readers to focus on the essentials.",
+            "homepage": "https://my.studiopress.com/themes/essence/"
+        },
+        {
+            "name": "wpremiumpackagist-plugin/genesis-sample",
+            "version": "3.2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://wpremiumpackagist.org/satispress/genesis-sample/3.2.0",
+                "reference": null,
+                "shasum": "be409538e9734b5daeeb6e3c985e83fd64b44d84"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-theme",
+            "authors": {
+                "name": "StudioPress",
+                "homepage": "https://www.studiopress.com/"
+            },
+            "description": "This is the sample theme created for the Genesis Framework.",
+            "homepage": "https://demo.studiopress.com/"
+        },
+        {
             "name": "wpremiumpackagist-plugin/gravityforms",
             "version": "2.4.16",
             "dist": {
@@ -315,26 +455,6 @@
             },
             "description": "Easily create web forms and manage form entries within the WordPress admin.",
             "homepage": "https://www.gravityforms.com"
-        },
-        {
-            "name": "wpremiumpackagist-plugin/twentyseventeen",
-            "version": "1.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://wpremiumpackagist.org/satispress/twentyseventeen/1.0",
-                "reference": null,
-                "shasum": "caa1592768938309c63686fd9ad8f15d6be3fd4e"
-            },
-            "require": {
-                "composer/installers": "^1.0"
-            },
-            "type": "wordpress-theme",
-            "authors": {
-                "name": "the WordPress team",
-                "homepage": "https://wordpress.org/"
-            },
-            "description": "Twenty Seventeen brings your site to life with header video and immersive featured images. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device.",
-            "homepage": "https://wordpress.org/themes/twentyseventeen/"
         }
     ],
     "packages-dev": [],
