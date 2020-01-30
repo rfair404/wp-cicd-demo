@@ -67,7 +67,9 @@ workflows:
   version: 2
   build-deploy:
     jobs:
-      - build
+      - build:
+        branches: 
+          ignore: develop
       - deploy:
         requires:
           - build
