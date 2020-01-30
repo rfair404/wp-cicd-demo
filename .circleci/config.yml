@@ -56,12 +56,12 @@ jobs:
       - image: k1sul1/circleci-wordpress:0.0.1
     steps: 
       - restore_cache:
-        keys: 
+          keys: 
           - v1-dependencies-{{ checksum "composer.json" }}
           - v1-dependencies-
       - run:
-        name: Check Files
-        command: ls -lah
+          name: Check Files
+          command: ls -lah
 
 workflows:
   version: 2
