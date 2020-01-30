@@ -68,12 +68,10 @@ jobs:
       - run:
           name: Check Files
           command: ls -lah wordpress
-      - add_ssh_keys:
-          fingerprints:
-            - "e3:18:36:fd:45:f9:5f:95:27:6a:fc:dc:5f:6e:25:fa"
+      - add_ssh_keys
       - run:
           name: Test ssh connection
-          command: ssh $SERVER_USER@$SERVER_HOST "whoami"
+          command: ssh $SERVER_USER@$SERVER_HOST -o StrictHostKeyChecking=no  "whoami"
       - run:
           name: Sync Files
           command: rsync -avz wordpress/ $SERVER_USER@$SERVER_HOST:$DEPLOY_PATH
