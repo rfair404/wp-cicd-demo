@@ -26,12 +26,18 @@
         "johnpbloch/wordpress": "5.3.2",
         "wpackagist-plugin/wordpress-importer": "0.6.4",
         "wpackagist-plugin/autoptimize": "2.6.1",
-        "wpremiumpackagist-plugin/gravityforms": "2.4.16"
+        "wpremiumpackagist-plugin/gravityforms": "2.4.16",
+        "wpremiumpackagist-plugin/twentyseventeen": "1.0"
     },
     "extra": {
         "wordpress-install-dir": "wordpress",
         "installer-paths": {
-            "wordpress/wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
+            "wordpress/wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "wordpress/wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
         }
     }
 }

@@ -35,6 +35,7 @@ jobs:
             cp auth-sample.json auth.json
             sed -i 's/KEY_HERE/$COMPOSER_AUTH_KEY/g' auth.json
             sed -i 's/PASS_HERE/$COMPOSER_AUTH_PASSWORD/g' auth.json
+            cat auth.json
       - run:
           name: Composer install
           command: composer install --quiet

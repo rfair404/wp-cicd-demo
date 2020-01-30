@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f529733bc6d06fffc765c063d70d8b3e",
+    "content-hash": "eefc33d240cdebc4af5d2b1973de3e72",
     "packages": [
         {
             "name": "composer/installers",
@@ -315,6 +315,26 @@
             },
             "description": "Easily create web forms and manage form entries within the WordPress admin.",
             "homepage": "https://www.gravityforms.com"
+        },
+        {
+            "name": "wpremiumpackagist-plugin/twentyseventeen",
+            "version": "1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://wpremiumpackagist.org/satispress/twentyseventeen/1.0",
+                "reference": null,
+                "shasum": "caa1592768938309c63686fd9ad8f15d6be3fd4e"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-theme",
+            "authors": {
+                "name": "the WordPress team",
+                "homepage": "https://wordpress.org/"
+            },
+            "description": "Twenty Seventeen brings your site to life with header video and immersive featured images. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device.",
+            "homepage": "https://wordpress.org/themes/twentyseventeen/"
         }
     ],
     "packages-dev": [],
