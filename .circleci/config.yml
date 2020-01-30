@@ -50,13 +50,13 @@ jobs:
           paths:
             - ./vendor
 
-  deploy:
-    docker:
-        # specify the version you desire here
-        # - image: circleci/php:7.0-fpm-node-browsers
-        - image: k1sul1/circleci-wordpress:0.0.1
-    working_directory: ~/repo
-    steps: 
+  # deploy:
+  #   docker:
+  #       # specify the version you desire here
+  #       # - image: circleci/php:7.0-fpm-node-browsers
+  #       - image: k1sul1/circleci-wordpress:0.0.1
+  #   working_directory: ~/repo
+  #   steps: 
       - checkout
       # - restore_cache:
       #   keys: 
@@ -70,9 +70,9 @@ workflows:
   build-deploy:
     jobs:
       - build
-      - deploy:
-        requires:
-          - build
-          filters:
-            branches:
-              only: master
+      # - deploy:
+      #   requires:
+      #     - build
+      #     filters:
+      #       branches:
+      #         only: master
