@@ -49,9 +49,20 @@ jobs:
           key: v1-dependencies-{{ checksum "composer.json" }}
           paths:
             - ./vendor
+  deploy:
+    working_directory: ~/repo
+    steps: 
+      - checkout
+      - restore_cache:
+        keys: 
+          - v1-dependencies-{{ checksum "composer.json" }}
+      - run:
+        name: Check Files
+        command: ls -lah
 
 workflows:
   version: 2
   build-deploy:
     jobs:
       - build
+      - deploy
