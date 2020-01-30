@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ce9ec29593508b0cf5caa7f70bb9569",
+    "content-hash": "f529733bc6d06fffc765c063d70d8b3e",
     "packages": [
         {
             "name": "composer/installers",
@@ -295,6 +295,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wordpress-importer/"
+        },
+        {
+            "name": "wpremiumpackagist-plugin/gravityforms",
+            "version": "2.4.16",
+            "dist": {
+                "type": "zip",
+                "url": "https://wpremiumpackagist.org/satispress/gravityforms/2.4.16",
+                "reference": null,
+                "shasum": "9f7d03cdb0a9a2d268d7523240c4fb3bb61dce3c"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "rocketgenius",
+                "homepage": "https://www.rocketgenius.com"
+            },
+            "description": "Easily create web forms and manage form entries within the WordPress admin.",
+            "homepage": "https://www.gravityforms.com"
         }
     ],
     "packages-dev": [],
