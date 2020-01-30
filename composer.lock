@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4616a213af25b1210038e87bf73e81aa",
+    "content-hash": "5414076a0359713b0191010f85d0d987",
     "packages": [
         {
             "name": "composer/installers",
@@ -415,6 +415,26 @@
             },
             "description": "Beautiful, clutter-free simplicity from the outside in, allowing you and your readers to focus on the essentials.",
             "homepage": "https://my.studiopress.com/themes/essence/"
+        },
+        {
+            "name": "wpremiumpackagist-plugin/genesis",
+            "version": "3.2.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://wpremiumpackagist.org/satispress/genesis/3.2.1",
+                "reference": null,
+                "shasum": "59d0a159f9d1f447258efe7898ade40b1f24b678"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-theme",
+            "authors": {
+                "name": "StudioPress",
+                "homepage": "https://www.studiopress.com/"
+            },
+            "description": "The industry standard for Premium WordPress Themes.",
+            "homepage": "https://my.studiopress.com/themes/genesis/"
         },
         {
             "name": "wpremiumpackagist-plugin/genesis-sample",
