@@ -69,6 +69,8 @@ jobs:
           name: Check Files
           command: ls -lah wordpress
       - add_ssh_keys
+          fingerprints:
+            - "1d:e1:c1:57:c4:2f:eb:6f:4e:95:3a:a8:a3:14:51:27"
       - run:
           name: Test ssh connection
           command: ssh -T $SERVER_USER@$SERVER_HOST
