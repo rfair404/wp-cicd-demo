@@ -1,1 +1,0 @@
-### This site is created statically, thanks to [WP2Static](https://wp2static.com/), [wp-cli](https://wp-cli.org/) and [WordPress](http://wordpress.org/).
