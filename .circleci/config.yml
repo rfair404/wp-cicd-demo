@@ -30,6 +30,9 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
       - run:
+          name: Create Composer Auth
+          command: which jq 
+      - run:
           name: Composer install
           command: composer install --quiet
 
