@@ -51,7 +51,7 @@ jobs:
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
           paths:
-            - ./wordpress
+            - ./vendor
 
   deploy:
     working_directory: ~/repo
@@ -68,6 +68,13 @@ jobs:
       - run:
           name: Check Files
           command: ls -lah wordpress
+      - run:
+          name: Test ssh connection
+          command: ssh -T $SERVER_USER@$SERVER_HOST
+      - run:
+          name: Sync Files
+          command: rsync -avz wordpress/ $SERVER_USER@$SERVER_HOST:$DEPLOY_PATH
+
 
 workflows:
   version: 2
