@@ -46,7 +46,7 @@ jobs:
 
       - run:
           name: Verify WP Core Files
-          command: ls -lah
+          command: ls -lah wordpress
 
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
@@ -63,8 +63,11 @@ jobs:
           keys: 
           - v1-dependencies-{{ checksum "composer.json" }}
       - run:
+          name: Composer install
+          command: composer install --quiet
+      - run:
           name: Check Files
-          command: ls -lah
+          command: ls -lah wordpress
 
 workflows:
   version: 2
