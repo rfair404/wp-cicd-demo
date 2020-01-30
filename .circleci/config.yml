@@ -70,7 +70,7 @@ jobs:
           command: ls -lah wordpress
       - add_ssh_keys:
           fingerprints:
-            - "1d:e1:c1:57:c4:2f:eb:6f:4e:95:3a:a8:a3:14:51:27"
+            - "e3:18:36:fd:45:f9:5f:95:27:6a:fc:dc:5f:6e:25:fa"
       - run:
           name: Test ssh connection
           command: ssh $SERVER_USER@$SERVER_HOST "whoami"
