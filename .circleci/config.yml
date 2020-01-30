@@ -55,8 +55,6 @@ jobs:
     docker:
       - image: k1sul1/circleci-wordpress:0.0.1
     steps: 
-      - checkout
-
       - restore_cache:
         keys: 
           - v1-dependencies-{{ checksum "composer.json" }}
