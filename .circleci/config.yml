@@ -54,7 +54,7 @@ jobs:
     working_directory: ~/repo
     docker:
       - image: k1sul1/circleci-wordpress:0.0.1
-  #   steps: 
+    steps: 
       - checkout
       # - restore_cache:
       #   keys: 
