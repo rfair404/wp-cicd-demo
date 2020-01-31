@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e9b4f5be37e6081a5f98382a7b236c5f",
+    "content-hash": "ac6289f326d0f7e47d25942d2ddba98b",
     "packages": [
         {
             "name": "composer/installers",
@@ -318,15 +318,15 @@
         },
         {
             "name": "wpackagist-plugin/flying-pages",
-            "version": "2.2.1",
+            "version": "2.4.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/flying-pages/",
-                "reference": "tags/2.2.1"
+                "reference": "tags/2.4.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/flying-pages.2.2.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/flying-pages.2.4.1.zip",
                 "reference": null,
                 "shasum": null
             },
