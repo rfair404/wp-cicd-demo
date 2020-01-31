@@ -31,6 +31,8 @@
         "wpackagist-plugin/wp-super-cache": "1.7.1",
         "wpackagist-plugin/w3-total-cache": "0.13.0",
         "wpackagist-plugin/cloudflare": "3.4.1",
+        "wpackagist-plugin/flying-pages": "2.2.1",
+        "wpackagist-plugin/hummingbird-performance": "2.3.0",
         "wpremiumpackagist-plugin/genesis": "3.2.1",
         "wpremiumpackagist-plugin/gravityforms": "2.4.16",
         "wpremiumpackagist-plugin/genesis-sample": "3.2.0",
