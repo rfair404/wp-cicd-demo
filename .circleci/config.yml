@@ -86,7 +86,7 @@ jobs:
           command: ssh $SERVER_USER@$SERVER_HOST -o StrictHostKeyChecking=no  "whoami"
       - run:
           name: Sync Files
-          command: rsync -avz --chown=circleci:www-data wordpress/ $SERVER_USER@$SERVER_HOST:$DEPLOY_PATH
+          command: rsync -avz -I --chown=circleci:www-data wordpress/ $SERVER_USER@$SERVER_HOST:$DEPLOY_PATH
 
 
 workflows:
