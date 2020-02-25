@@ -80,9 +80,9 @@ jobs:
       - run:
           name: Check if multidev exists
           command: | 
-            if [[ $MULTIDEV_DOMAINS == *"$CIRCLE_BRANCH"* ]]; then
+            if [[ $MULTIDEV_DOMAINS == *$CIRCLE_BRANCH* ]]; then
               echo "Creating Multidev!"
-              $(vendor/bin/terminus multidev:create $PANTHEON_SITE.dev $CIRCLE_BRANCH)
+              vendor/bin/terminus multidev:create $PANTHEON_SITE.dev $CIRCLE_BRANCH
             else
               echo "Multidev Exists, skipping..."
             fi
