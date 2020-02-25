@@ -71,6 +71,9 @@ jobs:
       - run:
           name: Check Terminus Site Info
           command: vendor/bin/terminus multidev:list $PANTHEON_SITE.dev
+      - run:
+          name: ID pipeline info
+          command: echo << pipeline.git.revision >>
 
   deploy-prod:
     working_directory: ~/repo
