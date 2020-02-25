@@ -65,7 +65,8 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          keys: - v1-dependencies-{{ checksum "composer.json" }}
+          keys: 
+            - v1-dependencies-{{ checksum "composer.json" }}
       - run:
         name: Create Composer Auth
         command: | 
