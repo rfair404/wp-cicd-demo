@@ -37,7 +37,7 @@ jobs:
             sed -i 's/PASS_HERE/'"$COMPOSER_AUTH_PASSWORD"'/g' auth.json
       - run:
           name: Composer install
-          command: composer install --quiet
+          command: composer install
 
       - run:
           name: Install WPCLI
