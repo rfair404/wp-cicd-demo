@@ -56,27 +56,26 @@ jobs:
       - image: circleci/php:7.2-fpm-node-browsers
     steps:
       - checkout      
-      # - run:
-      #     name: Create Composer Auth
-      #     command: | 
-      #       cp auth-sample.json auth.json
-      #       sed -i 's/KEY_HERE/'"$COMPOSER_AUTH_KEY"'/g' auth.json
-      #       sed -i 's/PASS_HERE/'"$COMPOSER_AUTH_PASSWORD"'/g' auth.json
-      # - run:
-      #     name: Composer install
-      #     command: composer install
-      # - run:
-      #     name: Authenticate Terminus Connection
-      #     command: vendor/bin/terminus auth:login --machine-token=$TERMINUS_AUTH_KEY
-      # - run:
-      #     name: Check Terminus Site Info
-      #     command: | 
-      #       vendor/bin/terminus multidev:list $PANTHEON_SITE
-      #       vendor/bin/terminus site:info $PANTHEON_SITE
+      - run:
+          name: Create Composer Auth
+          command: | 
+            cp auth-sample.json auth.json
+            sed -i 's/KEY_HERE/'"$COMPOSER_AUTH_KEY"'/g' auth.json
+            sed -i 's/PASS_HERE/'"$COMPOSER_AUTH_PASSWORD"'/g' auth.json
+      - run:
+          name: Composer install
+          command: composer install
+      - run:
+          name: Authenticate Terminus Connection
+          command: vendor/bin/terminus auth:login --machine-token=$TERMINUS_AUTH_KEY
+      - run:
+          name: Check Terminus Site Info
+          command: | 
+            vendor/bin/terminus multidev:list $PANTHEON_SITE
+            vendor/bin/terminus site:info $PANTHEON_SITE
       - run:
           name: ID pipeline info
           command: | 
-            echo "$CIRCLE_PR_NUMBER"
             echo "$CIRCLE_BRANCH"
 
   deploy-prod:
