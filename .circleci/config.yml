@@ -77,7 +77,12 @@ jobs:
           name: ID pipeline info
           command: | 
             echo "$CIRCLE_BRANCH"
-
+      - run:
+          name: Check if multidev exists
+          command: | 
+            if [[ $MULTIDEV_DOMAINS == *"$CIRCLE_BRANCH"* ]]; then
+              echo "It's there!"
+            fi
 
   deploy-prod:
     working_directory: ~/repo
