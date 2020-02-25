@@ -70,7 +70,7 @@ jobs:
           command: vendor/bin/terminus auth:login --machine-token=$TERMINUS_AUTH_KEY
       - run:
           name: Check Terminus Site Info
-          command: vendor/bin/terminus multidev:list $PANTHEON_SITE.dev
+          command: vendor/bin/terminus multidev:list $PANTHEON_SITE
       - run:
           name: ID pipeline info
           command: echo << pipeline.git.revision >>
