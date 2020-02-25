@@ -4,8 +4,8 @@ jobs:
     working_directory: ~/repo
     docker:
       # specify the version you desire here
-      # - image: circleci/php:7.0-fpm-node-browsers
-      - image: k1sul1/circleci-wordpress:0.0.1
+      - image: circleci/php:7.2-fpm-node-browsers
+      # - image: k1sul1/circleci-wordpress:0.0.1
         environment:
           - WP_TEST_URL: "http://localhost:1200"
           - WP_TEST_USER: "test"
@@ -61,14 +61,18 @@ jobs:
   deploy-dev:
     working_directory: ~/repo
     docker:
-      - image: k1sul1/circleci-wordpress:0.0.1
+      # - image: k1sul1/circleci-wordpress:0.0.1
+      - image: circleci/php:7.2-fpm-node-browsers
+
     steps:
       - checkout
 
   deploy-prod:
     working_directory: ~/repo
     docker:
-      - image: k1sul1/circleci-wordpress:0.0.1
+      # - image: k1sul1/circleci-wordpress:0.0.1
+      - image: circleci/php:7.2-fpm-node-browsers
+
     steps: 
       - checkout
       - restore_cache:
