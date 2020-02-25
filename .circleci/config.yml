@@ -71,7 +71,7 @@ jobs:
       - run:
           name: Check Terminus Site Info
           command: | 
-            MULTIDEV_DOMAINS=$(vendor/bin/terminus multidev:list $PANTHEON_SITE --fields=domain --format=csv)
+            MULTIDEV_DOMAINS=$(vendor/bin/terminus multidev:list $PANTHEON_SITE --fields=domain --format=list)
             echo $MULTIDEV_DOMAINS
       - run:
           name: ID pipeline info
