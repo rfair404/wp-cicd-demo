@@ -107,9 +107,9 @@ workflows:
           requires:
             - build
           # filters:
-          # branches:
-          #   ignore: 
-          #     - master
+          branches:
+            ignore: 
+              - master
       - deploy-prod:
           requires:
             - build
