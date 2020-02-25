@@ -70,10 +70,12 @@ jobs:
           command: vendor/bin/terminus auth:login --machine-token=$TERMINUS_AUTH_KEY
       - run:
           name: Check Terminus Site Info
-          command: vendor/bin/terminus multidev:list $PANTHEON_SITE
+          command: | 
+            vendor/bin/terminus multidev:list $PANTHEON_SITE
+            vendor/bin/terminus site:info $PANTHEON_SITE
       - run:
           name: ID pipeline info
-          command: echo << pipeline.git.revision >>
+          command: echo "pipe id is << pipeline.git.revision >>""
 
   deploy-prod:
     working_directory: ~/repo
