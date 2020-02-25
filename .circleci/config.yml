@@ -72,7 +72,7 @@ jobs:
           command: vendor/bin/terminus auth:login --machine-token=$TERMINUS_AUTH_KEY
       - run:
           name: Check Terminus Site Info
-          command: vendor/bin/terminus site:info ops-sandbox.dev
+          command: vendor/bin/terminus site:info $PANTHEON_SITE.dev
 
   deploy-prod:
     working_directory: ~/repo
@@ -106,12 +106,12 @@ workflows:
       - deploy-dev:
           requires:
             - build
-          # filters:
-          #   branches:
-          #     ignore: master
+          filters:
+            branches:
+              ignore: master
       - deploy-prod:
           requires:
             - build
-          # filter:
-          #   branches:
-          #     only: master
+          filter:
+            branches:
+              only: master
