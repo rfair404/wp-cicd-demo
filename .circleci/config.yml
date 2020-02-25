@@ -3,9 +3,7 @@ jobs:
   build:
     working_directory: ~/repo
     docker:
-      # specify the version you desire here
       - image: circleci/php:7.2-fpm-node-browsers
-      # - image: k1sul1/circleci-wordpress:0.0.1
         environment:
           - WP_TEST_URL: "http://localhost:1200"
           - WP_TEST_USER: "test"
@@ -21,13 +19,9 @@ jobs:
 
     steps:
       - checkout
-
-      # Download and cache dependencies
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "composer.json" }}
-
-            # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
       - run:
           name: Create Composer Auth
@@ -61,18 +55,17 @@ jobs:
   deploy-dev:
     working_directory: ~/repo
     docker:
-      # - image: k1sul1/circleci-wordpress:0.0.1
       - image: circleci/php:7.2-fpm-node-browsers
-
     steps:
       - checkout
+      - run:
+          name: Authenticate Terminus Connection
+          command: vendor/bin/terminus auth:login --machine-token=$TERMINUS_AUTH_KEY
 
   deploy-prod:
     working_directory: ~/repo
     docker:
-      # - image: k1sul1/circleci-wordpress:0.0.1
       - image: circleci/php:7.2-fpm-node-browsers
-
     steps: 
       - checkout
       - restore_cache:
@@ -91,12 +84,6 @@ jobs:
           name: Check Files
           command: ls -lah wordpress
       - add_ssh_keys
-      - run:
-          name: Test ssh connection
-          command: ssh $SERVER_USER@$SERVER_HOST -o StrictHostKeyChecking=no  "whoami"
-      - run:
-          name: Sync Files
-          command: rsync -avz -I --chown=circleci:www-data wordpress/ $SERVER_USER@$SERVER_HOST:$DEPLOY_PATH
 
 
 workflows:
