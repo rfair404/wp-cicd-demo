@@ -32,7 +32,6 @@ jobs:
       - run:
           name: Composer install
           command: composer install
-
       - run:
           name: Install WPCLI
           command: |
@@ -43,15 +42,14 @@ jobs:
             curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
             chmod +x wp-cli.phar
             sudo mv wp-cli.phar /usr/local/bin/wp
-
       - run:
           name: Verify WP Core Files
           command: ls -lah wordpress
-
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
           paths:
             - ./vendor
+
   deploy-dev:
     working_directory: ~/repo
     docker:
@@ -72,7 +70,7 @@ jobs:
           command: vendor/bin/terminus auth:login --machine-token=$TERMINUS_AUTH_KEY
       - run:
           name: Check Terminus Site Info
-          command: vendor/bin/terminus site:info $PANTHEON_SITE.dev
+          command: vendor/bin/terminus multidev:list $PANTHEON_SITE.dev
 
   deploy-prod:
     working_directory: ~/repo
