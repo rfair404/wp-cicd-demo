@@ -21,7 +21,7 @@
         }
     ],
     "require-dev": {
-        "pantheon-systems/terminus": "^1.0@dev"
+        "pantheon-systems/terminus": "^2.3.0"
     },
     "require": {
         "composer/installers": "^1.0@dev",

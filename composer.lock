@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "02b4466e48578c6a0caf8bf76e6600b6",
+    "content-hash": "d2fb8eee0b05a135b6bf49c31ccc3da9",
     "packages": [
         {
             "name": "composer/installers",
@@ -1701,16 +1701,16 @@
         },
         {
             "name": "pantheon-systems/terminus",
-            "version": "dev-master",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pantheon-systems/terminus.git",
-                "reference": "75122c02891fb22e31b73f3bf9eefdbbe86435bd"
+                "reference": "b7971c92b8f5e0a93b308a1253e7bbf855b21538"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pantheon-systems/terminus/zipball/75122c02891fb22e31b73f3bf9eefdbbe86435bd",
-                "reference": "75122c02891fb22e31b73f3bf9eefdbbe86435bd",
+                "url": "https://api.github.com/repos/pantheon-systems/terminus/zipball/b7971c92b8f5e0a93b308a1253e7bbf855b21538",
+                "reference": "b7971c92b8f5e0a93b308a1253e7bbf855b21538",
                 "shasum": ""
             },
             "require": {
@@ -1761,7 +1761,7 @@
                 "terminus",
                 "wordpress"
             ],
-            "time": "2020-02-04T17:55:51+00:00"
+            "time": "2020-01-09T22:19:11+00:00"
         },
         {
             "name": "psr/container",
@@ -2736,8 +2736,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "composer/installers": 20,
-        "pantheon-systems/terminus": 20
+        "composer/installers": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
