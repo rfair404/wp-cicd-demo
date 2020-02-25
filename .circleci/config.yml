@@ -81,7 +81,8 @@ jobs:
           name: Check if multidev exists
           command: | 
             if [[ $MULTIDEV_DOMAINS == *"$CIRCLE_BRANCH"* ]]; then
-              echo "It's there!"
+              echo "Creating Multidev!"
+              vendor/bin/terminus multidev:create $PANTHEON_SITE.dev $CIRCLE_BRANCH
             fi
 
   deploy-prod:
