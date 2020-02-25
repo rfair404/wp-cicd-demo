@@ -70,6 +70,9 @@ jobs:
       - run:
           name: Authenticate Terminus Connection
           command: vendor/bin/terminus auth:login --machine-token=$TERMINUS_AUTH_KEY
+      - run:
+          name: Check Terminus Site Info
+          command: vendor/bin/terminus site:info ops-sandbox.dev
 
   deploy-prod:
     working_directory: ~/repo
