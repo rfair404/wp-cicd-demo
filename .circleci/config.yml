@@ -114,8 +114,8 @@ workflows:
               ignore: 
                 - master
       - deploy-prod:
-          requires:
-            - build
+          # requires:
+          #   - build
           filters:
             branches:
               only: 
