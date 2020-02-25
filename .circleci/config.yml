@@ -106,10 +106,10 @@ workflows:
       - deploy-dev:
           requires:
             - build
-          # filters:
-          # branches:
-            # ignore: 
-            #   - master
+          filters:
+            branches:
+              ignore: 
+                - master
       - deploy-prod:
           requires:
             - build
