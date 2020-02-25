@@ -114,6 +114,6 @@ workflows:
           requires:
             - build
           # filter:
-          # branches:
-          #   only: 
-          #     - master
+          branches:
+            only: 
+              - master
